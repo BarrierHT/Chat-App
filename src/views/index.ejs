@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Chat App</title>
-		<link rel="stylesheet" href="main.css" />
+		<link rel="stylesheet" href="/main.css" />
 		<script
 			defer
 			src="http://localhost:3000/socket.io/socket.io.js"
@@ -14,7 +14,7 @@
 			defer
 			src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"
 		></script>
-		<script defer src="main.js"></script>
+		<script defer src="/main.js"></script>
 	</head>
 	<body>
 		<div id="room-container">
@@ -27,5 +27,9 @@
 			<input name="room" type="text" required />
 			<button type="submit">New Room</button>
 		</form>
+		<input type="text" placeholder="Write your name" name="name" required />
+
+		<button id="login">Login</button>
+		<button id="logout">Logout</button>
 	</body>
 </html>

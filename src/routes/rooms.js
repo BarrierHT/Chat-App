@@ -9,4 +9,6 @@ router.post('/room', roomController.postCreateRoom);
 
 router.get('/:room', roomController.getRoom);
 
+router.get('/userRoom/:username', roomController.getUserRoom);
+
 module.exports = router;

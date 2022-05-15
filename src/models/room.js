@@ -9,21 +9,6 @@ const roomSchema = new Schema(
 			required: true,
 			unique: true,
 		},
-		usersConnected: [
-			//ToDo get all online Users
-			{
-				_id: false,
-				userId: {
-					type: Schema.Types.ObjectId,
-					required: true,
-					ref: 'User',
-				},
-				socketId: {
-					type: String,
-					required: true,
-				},
-			},
-		],
 		messages: [
 			{
 				_id: false,
@@ -42,8 +27,24 @@ const roomSchema = new Schema(
 				},
 			},
 		],
+
+		usersConnected: [
+			//ToDo get all online Users
+			{
+				_id: false,
+				userId: {
+					type: Schema.Types.ObjectId,
+					required: true,
+					ref: 'User',
+				},
+				socketId: {
+					type: String,
+					required: true,
+				},
+			},
+		],
 	},
-	{ timestamps: true, toJSON: true }
+	{ timestamps: true, toJSON: true, versionKey: false }
 );
 
 module.exports = mongoose.model('Room', roomSchema);

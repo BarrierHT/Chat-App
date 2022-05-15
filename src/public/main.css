@@ -8,6 +8,7 @@ body {
 #message-container {
 	width: 80%;
 	max-width: 1200px;
+	overflow: auto;
 }
 
 #message-container div {
@@ -20,13 +21,15 @@ body {
 }
 
 #send-container {
-	position: fixed;
+	/* position: fixed; */
+	margin: 30px;
 	padding-bottom: 30px;
 	bottom: 0;
 	background-color: white;
 	max-width: 1200px;
 	width: 80%;
-	display: flex;
+	display: block;
+	/* d/isplay: flex; */
 }
 
 #message-input {
@@ -37,4 +40,14 @@ body {
 	position: fixed;
 	bottom: 0.7rem;
 	display: flex;
+}
+
+#users-container {
+	display: inline-block;
+	margin-right: 5em;
+	/* display: flex; */
+}
+
+.list-element-user {
+	margin-bottom: 2em;
 }

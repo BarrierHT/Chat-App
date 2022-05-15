@@ -11,6 +11,7 @@ const morgan = require('morgan');
 const cors = require('cors');
 
 const User = require('./models/user');
+require('./controllers/socket');
 const roomRouter = require('./routes/rooms');
 
 const mongoUser = process.env.MONGO_USER;
